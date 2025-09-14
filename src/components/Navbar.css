@@ -1,0 +1,64 @@
+.navbar {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.navbar-brand span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Spacing add ki */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400; /* Weight halka kiya */
+  letter-spacing: 0.5px; /* Spacing add ki */
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; 
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}

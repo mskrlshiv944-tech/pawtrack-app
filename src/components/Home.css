@@ -1,0 +1,217 @@
+/* Naye Fonts ka code */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, .navbar-brand span {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-container {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative; 
+  overflow: hidden;
+  background-color: #fdf8f2; /* Background color yahan hai */
+}
+
+/* === AURORA BLOBS KI STYLING === */
+.background-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  opacity: 0.4;
+}
+.blob1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background-color: #d35400; /* Warm Orange */
+}
+.blob2 {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  background-color: #3498db; /* Cool Blue */
+}
+/* ================================== */
+
+/* Baaki content ko blobs ke upar laane ke liye */
+.hero-section, .features-section, .footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  height: 60vh;
+  background: url('/dog-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-content .main-heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #d35400;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #a04000;
+  transform: scale(1.05);
+}
+
+.features-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features-section .section-heading {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.feature-card {
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.feature-card:hover .card-background {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.feature-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.feature-card span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    gap: 4rem;
+  }
+  .feature-card {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
